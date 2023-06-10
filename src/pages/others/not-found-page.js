@@ -23,15 +23,21 @@ const NotFoundPage = () => {
                     </Typography>
                     <Grid container={true} justifyContent="center">
                         <Grid item={true} xs={12} md="auto">
-                            <Link to="/" style={{textDecoration: 'none'}}>
+                            <Link
+                                to=""
+                                style={{textDecoration: "none"}}>
                                 <Button
-                                    color="secondary"
+                                    disableElevation={true}
+                                    variant="outlined"
+                                    size="large"
                                     fullWidth={true}
                                     sx={{
-                                        textTransform: 'capitalize',
-                                    }}
-                                    variant="contained"
-                                    disableElevation={true}>
+                                        textTransform: "none",
+                                        color: "white",
+                                        borderColor: "rgba(255, 255, 255, 0.45)",
+                                        borderStyle: "solid",
+                                        borderWidth: 1
+                                    }}>
                                     Back Home
                                 </Button>
                             </Link>

@@ -103,7 +103,7 @@ const HomePage = () => {
                         <Stack direction="row" alignItems="center" justifyContent="space-between">
                             <Typography
                                 sx={{color: "text.primary", fontWeight: 700}}
-                                variant="h3">
+                                variant="h4">
                                 Work
                             </Typography>
                             <Link to="/portfolio" style={{textDecoration: "none"}}>
@@ -140,7 +140,7 @@ const HomePage = () => {
                         <Stack direction="row" alignItems="center" justifyContent="space-between">
                             <Typography
                                 sx={{color: "text.primary", fontWeight: 700}}
-                                variant="h3">
+                                variant="h4">
                                 Services
                             </Typography>
                             <Link to="/portfolio" style={{textDecoration: "none"}}>
@@ -229,7 +229,6 @@ const HomePage = () => {
                         </Grid>
                     </Container>
                 </Box>
-
             </Box>
         </Layout>
     )

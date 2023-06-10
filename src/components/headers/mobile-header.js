@@ -48,7 +48,8 @@ const MobileHeader = () => {
                                 fontSize: 32,
                                 padding: 0.5,
                                 color: "icon.secondary",
-                                borderRadius: "100%"
+                                borderRadius: "25%",
+                                cursor: "pointer"
                             }}
                         />
                     </Stack>

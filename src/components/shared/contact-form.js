@@ -45,7 +45,7 @@ const ContactForm = () => {
 
 
     return (
-        <Card elevation={0} sx={{height: "100%"}}>
+        <Card elevation={0} sx={{height: "100%", backgroundColor: "white"}}>
             {loading && <LinearProgress variant="query" color="secondary"/>}
             <CardContent>
                 {error && (
@@ -59,7 +59,7 @@ const ContactForm = () => {
                             <Grid container={true} spacing={2}>
                                 <Grid item={true} xs={12} md={6}>
                                     <FormControl fullWidth={true}>
-                                        <Typography variant="body2" sx={{mb: 1}}>
+                                        <Typography variant="body2" sx={{mb: 1, color: "rgba(0, 0, 0, 0.85)"}}>
                                             First Name
                                         </Typography>
                                         <OutlinedInput
@@ -71,6 +71,15 @@ const ContactForm = () => {
                                             error={formik.touched.first_name && Boolean(formik.errors.first_name)}
                                             onChange={formik.handleChange}
                                             onBlur={formik.handleBlur}
+                                            sx={{
+                                                borderRadius: 0.25,
+                                                borderWidth: '1px',
+                                                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                                color: 'rgba(0, 0, 0, 0.85)',
+                                                "::placeholder": {
+                                                    color: "rgba(0, 0, 0, 0.1)"
+                                                }
+                                            }}
                                         />
                                         {formik.touched.first_name && formik.errors.first_name && (
                                             <FormHelperText>
@@ -82,7 +91,7 @@ const ContactForm = () => {
                                 <Grid item={true} xs={12} md={6}>
                                     <Box>
                                         <FormControl fullWidth={true}>
-                                            <Typography variant="body2" sx={{mb: 1}}>
+                                            <Typography variant="body2" sx={{mb: 1, color: "rgba(0, 0, 0, 0.85)"}}>
                                                 Last Name
                                             </Typography>
                                             <OutlinedInput
@@ -94,6 +103,15 @@ const ContactForm = () => {
                                                 error={formik.touched.last_name && Boolean(formik.errors.last_name)}
                                                 onChange={formik.handleChange}
                                                 onBlur={formik.handleBlur}
+                                                sx={{
+                                                    borderRadius: 0.25,
+                                                    borderWidth: '1px',
+                                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                                    color: 'rgba(0, 0, 0, 0.85)',
+                                                    "::placeholder": {
+                                                        color: "rgba(0, 0, 0, 0.1)"
+                                                    }
+                                                }}
                                             />
                                             {formik.touched.last_name && formik.errors.last_name && (
                                                 <FormHelperText>
@@ -108,7 +126,7 @@ const ContactForm = () => {
 
                         <Box>
                             <FormControl fullWidth={true}>
-                                <Typography variant="body2" sx={{mb: 1}}>
+                                <Typography variant="body2" sx={{mb: 1, color: "rgba(0, 0, 0, 0.85)"}}>
                                     Email
                                 </Typography>
                                 <OutlinedInput
@@ -121,6 +139,15 @@ const ContactForm = () => {
                                     error={formik.touched.email && Boolean(formik.errors.email)}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
+                                    sx={{
+                                        borderRadius: 0.25,
+                                        borderWidth: '1px',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                        color: 'rgba(0, 0, 0, 0.85)',
+                                        "::placeholder": {
+                                            color: "rgba(0, 0, 0, 0.1)"
+                                        }
+                                    }}
                                 />
                                 {formik.touched.email && formik.errors.email && (
                                     <FormHelperText>
@@ -132,7 +159,7 @@ const ContactForm = () => {
 
                         <Box>
                             <FormControl fullWidth={true}>
-                                <Typography variant="body2" sx={{mb: 1}}>
+                                <Typography variant="body2" sx={{mb: 1, color: "rgba(0, 0, 0, 0.85)"}}>
                                     Subject
                                 </Typography>
                                 <OutlinedInput
@@ -145,6 +172,15 @@ const ContactForm = () => {
                                     error={formik.touched.subject && Boolean(formik.errors.subject)}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
+                                    sx={{
+                                        borderRadius: 0.25,
+                                        borderWidth: '1px',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                        color: 'rgba(0, 0, 0, 0.85)',
+                                        "::placeholder": {
+                                            color: "rgba(0, 0, 0, 0.1)"
+                                        }
+                                    }}
                                 />
                                 {formik.touched.subject && formik.errors.subject && (
                                     <FormHelperText>
@@ -156,7 +192,7 @@ const ContactForm = () => {
 
                         <Box>
                             <FormControl fullWidth={true}>
-                                <Typography variant="body2" sx={{mb: 1}}>
+                                <Typography variant="body2" sx={{mb: 1, color: "rgba(0, 0, 0, 0.85)"}}>
                                     Message
                                 </Typography>
                                 <OutlinedInput
@@ -171,6 +207,15 @@ const ContactForm = () => {
                                     error={formik.touched.message && Boolean(formik.errors.message)}
                                     onChange={formik.handleChange}
                                     onBlur={formik.handleBlur}
+                                    sx={{
+                                        borderRadius: 0.25,
+                                        borderWidth: '1px',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                        color: 'rgba(0, 0, 0, 0.85)',
+                                        "::placeholder": {
+                                            color: "rgba(0, 0, 0, 0.1)"
+                                        }
+                                    }}
                                 />
                                 {formik.touched.message && formik.errors.message && (
                                     <FormHelperText>
@@ -179,20 +224,24 @@ const ContactForm = () => {
                                 )}
                             </FormControl>
                         </Box>
-                        <Grid container={true} justifyContent="flex-start">
-                            <Grid item={true} xs={12} md="auto">
-                                <Button
-                                    type="submit"
-                                    disableElevation={true}
-                                    variant="contained"
-                                    disabled={loading}
-                                    size="large"
-                                    color="secondary"
-                                    sx={{textTransform: "none"}}>
-                                    {loading ? 'Sending...' : 'Send Message'}
-                                </Button>
-                            </Grid>
-                        </Grid>
+
+                        <Button
+                            fullWidth={true}
+                            type="submit"
+                            disableElevation={true}
+                            variant="contained"
+                            disabled={loading}
+                            size="large"
+                            color="secondary"
+                            sx={{
+                                backgroundColor: "rgba(0, 0, 0, 1)",
+                                color: "white",
+                                textTransform: "none",
+                                borderRadius: 0.25,
+                                py: {xs: 1.5, lg: 0.75}
+                            }}>
+                            {loading ? 'Sending...' : 'Send Message'}
+                        </Button>
                     </Stack>
                 </form>
             </CardContent>

@@ -60,14 +60,18 @@ const DesktopHeader = () => {
                                     En
                                 </Typography>
                             </Stack>
-                            <Stack direction="row" alignItems="center" spacing={1}>
+                            <Stack
+                                onClick={() => dispatch(UI_ACTION_CREATORS.toggleDrawer())}
+                                direction="row"
+                                alignItems="center"
+                                sx={{cursor: "pointer"}}
+                                spacing={1}>
                                 <Typography
                                     variant="body2"
                                     sx={{textTransform: "uppercase", color: 'text.primary'}}>
                                     Menu
                                 </Typography>
                                 <MenuOutlined
-                                    onClick={() => dispatch(UI_ACTION_CREATORS.toggleDrawer())}
                                     sx={{
                                         borderWidth: 1,
                                         borderColor: "icon.border",
@@ -76,7 +80,8 @@ const DesktopHeader = () => {
                                         fontSize: 32,
                                         padding: 0.5,
                                         color: "icon.secondary",
-                                        borderRadius: "100%"
+                                        borderRadius: "25%",
+                                        cursor: "pointer"
                                     }}
                                 />
                             </Stack>
