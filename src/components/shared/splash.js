@@ -18,12 +18,12 @@ const Splash = () => {
                             align="center"
                             sx={{
                                 textTransform: "uppercase",
-                                color: "secondary.main",
+                                color: "text.primary",
                                 fontWeight: 700,
                                 letterSpacing: 1.4,
                                 mb: 3
                             }}>
-                            World Support Foundation
+                            Eval Digital
                         </Typography>
 
                         <Typography
@@ -33,7 +33,7 @@ const Splash = () => {
                                 color: "text.primary",
                                 fontWeight: 600,
                             }}>
-                            Because we all matter
+                            Empowering Your Digital Vision
                         </Typography>
                     </Box>
                     <Box>
