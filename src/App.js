@@ -14,21 +14,21 @@ const NotFoundPage = lazy(() => import("./pages/others/not-found-page"));
 
 
 function App() {
-  const location = useLocation();
-  return (
-      <ThemeProvider theme={theme}>
-        <CssBaseline enableColorScheme={true}/>
-        <Routes location={location}>
-          <Route path="/">
-            <Route index={true} element={<Suspense fallback={<Splash/>}><HomePage/></Suspense>}/>
-            <Route path="us" element={<Suspense fallback={<Splash/>}><AboutPage/></Suspense>}/>
-            <Route path="contact" element={<Suspense fallback={<Splash/>}><ContactPage/></Suspense>}/>
-            <Route path="portfolio" element={<Suspense fallback={<Splash/>}><PortfolioPage/></Suspense>}/>
-            <Route path="*" element={<Suspense fallback={<Splash/>}><NotFoundPage/></Suspense>}/>
-          </Route>
-        </Routes>
-      </ThemeProvider>
-  );
+    const location = useLocation();
+    return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline enableColorScheme={true}/>
+            <Routes location={location}>
+                <Route path="/">
+                    <Route index={true} element={<Suspense fallback={<Splash/>}><HomePage/></Suspense>}/>
+                    <Route path="us" element={<Suspense fallback={<Splash/>}><AboutPage/></Suspense>}/>
+                    <Route path="contact" element={<Suspense fallback={<Splash/>}><ContactPage/></Suspense>}/>
+                    <Route path="portfolio" element={<Suspense fallback={<Splash/>}><PortfolioPage/></Suspense>}/>
+                    <Route path="*" element={<Suspense fallback={<Splash/>}><NotFoundPage/></Suspense>}/>
+                </Route>
+            </Routes>
+        </ThemeProvider>
+    );
 }
 
 export default App;
