@@ -6,9 +6,7 @@ import {useDispatch} from "react-redux";
 const SidebarLink = ({path, label}) => {
     const {pathname} = useLocation();
     const dispatch = useDispatch();
-    const handleClick = () => {
-        dispatch(UI_ACTION_CREATORS.toggleDrawer());
-    }
+
     return (
         <Link
             to={path}
@@ -20,7 +18,7 @@ const SidebarLink = ({path, label}) => {
                 padding: 12,
                 display: "block"
             }}
-            onClick={handleClick}>
+            onClick={() => dispatch(UI_ACTION_CREATORS.toggleDrawer())}>
             <Typography
                 variant="body2"
                 sx={{
